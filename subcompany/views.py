@@ -202,7 +202,7 @@ class companyclass(generics.ListAPIView):
         try:
             user_id=request.user.id
             # user=request.user
-            print(user_id,"_______user_id_")
+            print(user_id,"_______id")
             # model = company.objects.filter().prefetch_related("adminuser")
             companies = company.objects.filter(Q(adminuser__id=user_id)).first()
             # model=company.objects.get(user_id=user_id)
