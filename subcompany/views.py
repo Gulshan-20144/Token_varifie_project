@@ -225,6 +225,7 @@ class companyclass(generics.ListAPIView):
                 'message': "Something is Wrong.",
                 'error': str(e)
             }
+            print(str(e))
             logger.error(
                 f"Exit log: Requesting {request.build_absolute_uri()} \n\n additionalInfo:\n\n  {str(e)}")
         return Response(response, status=status_code)
